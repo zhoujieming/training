@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Javasript能够做什么</h2>
+    <p id="visabityTest" style="visibility: visible;">
+        Javascript能够隐藏HTML 元素
+        <button type="button" onclick="document.getElementById('visabityTest').style.visibility='hidden'">点击我隐藏HTML元素！</button>
+    </p>
+    <p id="displayTest" style="display: block;">
+        Javascript能够删除HTML 元素
+        <button type="button" onclick="document.getElementById('displayTest').style.display='None'">点击我删除HTML元素！</button>
+    </p> 
+   <!-- 不知道如何在一个按钮的onclick事件中绑定两个事件同时触发 -->
+   <!--  <p id="defaultTest">Javascript能够还原HTML元素 
+        <button type="button" 
+        onclick="document.getElementById('visabityTest').style.visibility='visible'&&
+        document.getElementById('displayTest').style.display('block')">
+        点击我还原HTML元素！</button>
+    </p> -->
+    <p id="defaultTest">Javascript能够还原HTML元素
+         <button type="button" 
+             onclick="document.getElementById('visabityTest').style.visibility='visible'">
+            点击我还原被隐藏的HTML元素！
+        </button>
+         <button type="button" 
+             onclick="document.getElementById('displayTest').style.display='block'">
+             点击我还原被隐藏的HTML元素！
+        </button>
+    </p>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+    	function demo_function() {
+    
+    		document.getElementById('demo').innerHTML = '段落已被更改';
+        }
+    </script>
+</head>
+<body>
+	<h2>Head 中的Javascript</h2>
+    <p id="demo"> 一个段落</p>
+    <button type="button" onclick="demo_function()">试一试</button>
+</body>
+</html>
